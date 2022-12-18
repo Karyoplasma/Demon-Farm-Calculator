@@ -7,4 +7,4 @@ Release page: https://github.com/Karyoplasma/Demon-Farm-Calculator/releases/tag/
 
 Good luck.
 
-If you want to compile yourself, the GUI uses MigLayout as a layout manager, so you'll have to include the .jar in the classpath.
+If you want to compile yourself, the GUI uses MigLayout as a layout manager, so you'll have to include the .jar in the classpath. Main method is in DemonFarmCalculatorGUI.
