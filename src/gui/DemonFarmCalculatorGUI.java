@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.swing.SwingConstants;
 
 public class DemonFarmCalculatorGUI implements ActionListener, Observer {
 
@@ -61,7 +62,7 @@ public class DemonFarmCalculatorGUI implements ActionListener, Observer {
 		frmDemonFarmCalculator.setTitle("Demon Farm Calculator");
 		frmDemonFarmCalculator.setBounds(100, 100, 685, 194);
 		frmDemonFarmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmDemonFarmCalculator.getContentPane().setLayout(new MigLayout("", "[grow][grow][grow]", "[][][][][]"));
+		frmDemonFarmCalculator.getContentPane().setLayout(new MigLayout("", "[][grow][]", "[][][][][]"));
 		
 		comboBox_creature = new JComboBox<Creature>();
 		comboBox_creature.setModel(new DefaultComboBoxModel<Creature>(Creature.values()));
@@ -78,8 +79,9 @@ public class DemonFarmCalculatorGUI implements ActionListener, Observer {
 		chckbxRingOfVitality.addActionListener(this);
 		
 		lblCreatureHitPoints = new JLabel("Creature hit points:");
+		lblCreatureHitPoints.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblCreatureHitPoints.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		frmDemonFarmCalculator.getContentPane().add(lblCreatureHitPoints, "cell 0 1");
+		frmDemonFarmCalculator.getContentPane().add(lblCreatureHitPoints, "cell 0 1,alignx right,growy");
 		
 		textField_creatureHitPoints = new JTextField();
 		textField_creatureHitPoints.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -90,7 +92,7 @@ public class DemonFarmCalculatorGUI implements ActionListener, Observer {
 		
 		JLabel lblPitLordStack = new JLabel("Pit Lord stack size:");
 		lblPitLordStack.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		frmDemonFarmCalculator.getContentPane().add(lblPitLordStack, "cell 0 2");
+		frmDemonFarmCalculator.getContentPane().add(lblPitLordStack, "cell 0 2,alignx right,growy");
 		
 		textField_pitlordStack = new JTextField();
 		textField_pitlordStack.setText("1");
@@ -105,7 +107,7 @@ public class DemonFarmCalculatorGUI implements ActionListener, Observer {
 		
 		JLabel lblResultingDemonStack = new JLabel("Resulting Demon stack size:");
 		lblResultingDemonStack.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		frmDemonFarmCalculator.getContentPane().add(lblResultingDemonStack, "cell 0 3");
+		frmDemonFarmCalculator.getContentPane().add(lblResultingDemonStack, "cell 0 3,alignx right,growy");
 		
 		textField_demonStack = new JTextField();
 		textField_demonStack.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -119,7 +121,7 @@ public class DemonFarmCalculatorGUI implements ActionListener, Observer {
 		
 		JLabel lblNeededStackSize = new JLabel("Needed stack size of creature:");
 		lblNeededStackSize.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		frmDemonFarmCalculator.getContentPane().add(lblNeededStackSize, "cell 0 4");
+		frmDemonFarmCalculator.getContentPane().add(lblNeededStackSize, "cell 0 4,alignx right,growy");
 		
 		textField_creatureStackSize = new JTextField();
 		textField_creatureStackSize.setFont(new Font("Tahoma", Font.BOLD, 14));
