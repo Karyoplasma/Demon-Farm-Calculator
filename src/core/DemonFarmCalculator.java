@@ -13,14 +13,8 @@ public class DemonFarmCalculator extends Observable {
 	public void getCreatureStackSize(int creatureHitpoints, int pitlords) {
 		int demonStackMaximumHP = ((pitlords * 50) / 35) * 35;
 		int creatureStackSize = demonStackMaximumHP / creatureHitpoints;
-		int test =  (int) Math.ceil(((double) demonStackMaximumHP) / creatureHitpoints);
 		if ((demonStackMaximumHP % creatureHitpoints) != 0) {
 			creatureStackSize++;
-		}
-		if (test != creatureStackSize) {
-			System.out.println("not the same " + test);
-		} else {
-			System.out.println("same");
 		}
 		setChanged();
 		notifyObservers("creatures;" + creatureStackSize);
