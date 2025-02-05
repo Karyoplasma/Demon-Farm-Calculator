@@ -3,9 +3,9 @@ A small tool to calculate the required stack size for farming Demons with Infern
 
 Should be straighforward to use. Has a small data set of the hitpoint values of the most commonly used sacrifices. To sacrifice random joiners, put it on OVERRIDE and state the creature's hit points in the HP text field. 
 
-First Aid combo box is for HotA 1.7.2+, if you are not playing HotA, leave it on NONE. (todo: implement specialty)
+First Aid combo box is for HotA 1.7.2+, if you are not playing HotA, leave it on NONE.
 
-Release page: https://github.com/Karyoplasma/Demon-Farm-Calculator/releases/tag/1.0.0
+Release page: https://github.com/Karyoplasma/Demon-Farm-Calculator/releases/latest
 
 Good luck.
 
